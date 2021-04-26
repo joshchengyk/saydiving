@@ -1,0 +1,88 @@
+.catalog{
+   height:100vh;
+   background-color:blue;
+   padding-top:25px;
+}
+
+.header{
+   height:140px;
+   background-color:orange;
+}
+
+.image-holder{
+   height:100vh;
+   background-color:gray;
+}
+
+.message-holder{
+   height:100vh;
+   background-color:pink;
+}
+
+.page-title{
+   margin-top: 25px;
+   margin-bottom: 25px;
+   border-bottom: aqua;
+   border-bottom-style: solid;
+   font-weight:600;
+	
+}
+
+.question-row{
+   background-color:aqua;
+   margin-bottom: 0;
+   border-radius:5px;
+}
+
+.question{
+   margin-bottom:0;
+   font-weight:600;
+}
+
+.answer-row{
+   margin-bottom: 20px !important;
+}
+
+.QAbox{
+   border-style: solid;
+   border-color: blue;
+   border-radius: 10px;
+   padding: 0;
+   margin-bottom:25px;
+}
+
+
+.MsgBox{
+   height:10vh;
+   background-color:yellow;
+   margin:10px;
+   border-radius:10px;
+   
+}
+
+.MsgBody{
+   Padding:10px;
+   background-color:green;
+   border-radius: 25px;
+   word-wrap:break-word;
+}
+
+.Q{
+   font-size: 25px;
+   font-weight: 600;
+   color: #ff738c;
+   padding-left:10px;
+}
+
+.A{
+   font-size: 25px;
+   font-weight: 600;
+   color:#1dda06;
+   padding-left:10px;
+}
+
+.QAsection{
+   margin-bottom: 13vh;
+}
+
+
