@@ -502,6 +502,10 @@ table td{
     
 }
 
+.no-padding{
+	padding:0;
+}
+
 .bgtext{
 	color:white !important;
 	font-weight: 600 !important;
@@ -555,6 +559,34 @@ table td{
 	margin-bottom:45px;
 }
 
+.lesson-item{
+	margin-bottom:10px;
+}
+
+
+.item-box{
+	margin-top:10px;
+	margin-bottom:25px;
+}
+
+.transfer-box{
+	border-radius: 10px;
+	border-style:solid;
+	border-color:darkgray;
+}
+
+.transfer-item{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.transfer-summary{
+	margin-top:10px;
+	margin-bottom:10px;
+	border-top-color:black;
+	border-top-style:solid;
+}
+
 
 .profile-card{
 	margin-bottom:25px;
@@ -565,8 +597,22 @@ table td{
 }
 
 .page-title{
-	padding: 25px 0px 25px 0px;
+	padding-top:25px;
+	padding-bottom:25px;
     font-weight: 600;
+}
+
+.pay-title{
+	color:#3083DC;
+	font-size: 72px;
+	margin-top:25px;
+}
+
+
+.pay-subtitle{
+	margin-bottom:25px;
+	border-bottom-style:solid;
+
 }
 
 .text-light{
@@ -583,15 +629,32 @@ table td{
 
 .header-nav:hover{
 	background-color:rgb(236, 236, 236);
-	
 }
 
 .news-body{
 	background-image:url('/pictures/newsBG.jpg');
 	background-size:100vw;
+	background-repeat: no-repeat;
 	width:100vw;
 	height:100vh;
 }
+
+.comingSoon{
+	font-size:72px;
+	margin-top: 6vh;
+}
+
+
+.btn1{
+	font-weight: 600;
+	color:white;
+	background-color: orange;
+	border-radius: 10px;
+	height:45px;
+}
+
+
+
 
 .page-enter-active,
 .page-leave-active {
@@ -603,6 +666,7 @@ table td{
 .page-leave-to {
   opacity: 0;
 }
+
 
 @media only screen and (max-width: 768px) {
 	#second h5 {

@@ -2,7 +2,7 @@
     <div>
         <h1 class='col-md-12 text-center page-title'>潛水課程</h1>
         <div class='container' v-for='(lesson,idx) in lessons' :key='idx' >      
-            <nuxt-link to='/aboutus'>
+            <nuxt-link to='/lessons/openwaterdiver'>
                 <div class='row lesson-row animate-show lessonCard' v-if='idx % 2 ==0 || window.width < 765 ' >
                     <div class='col-md-7'>                   
                         <h1 class='lesson-title'>{{lesson.title}}</h1>

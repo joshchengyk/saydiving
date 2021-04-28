@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class='container-fluid'>
+        <div class='container-fluid no-padding'>
             <div class='row'>
                 <div class='col-md-7 animate-show'>
                     <img src="/pictures/profile.jpg" alt="Image" >
