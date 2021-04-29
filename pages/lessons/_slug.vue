@@ -82,7 +82,7 @@
                         <h6 class='text-right transfer-summary'>總共:{{16000*numvalue+"$"}}</h6>
                     </div>   
 
-                    <button class='btn1 col-md-4 offset-md-4 '>確認報名</button>                  
+                    <button class='btn1 col-md-4 offset-md-4' @click='transfer'>確認報名</button>                  
            
                 </div>
                 
@@ -95,11 +95,19 @@
 
 <script>
   export default {
+
     data() {
-      return {
-        datevalue: '',
-        numvalue:1
-      }
+        return {
+            datevalue: '',
+            numvalue:1
+        }
+    },
+
+    methods:{
+        transfer(){
+            window.location='/lessons/confirm'
+            
+        }
     }
   }
 </script>
