@@ -62,7 +62,7 @@ export default {
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: 'Say衝潛水課程',
+            hid: 'Say衝潛水 專業潛水課程',
             name: 'lesson page',
             content: 'Say衝潛水專業潛水課程,教學經驗豐富 曾在世界各地知名潛點如帛琉、大堡礁、馬爾地夫等進行教學活動'
           }

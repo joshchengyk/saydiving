@@ -8,8 +8,16 @@
 
                 <div class='col-md-5 container-info'>
                     <div class='row page-title'>
-                        <h1 class='text-center col-md-12 animate-show'>關於Say衝</h1>
+                        <h1 class='col-md-10 offset-md-1 animate-show'>關於Say衝</h1>
                     </div>
+
+                    <p class= 'col-md-10 offset-md-1 animate-show'>
+                        如果你的職業是攝影師 你應該去拍別人拍不到的世界<br>
+                        如果你愛抓寶可夢 你應該要抓到全世界的寶可夢<br>
+                        如果你真的愛健身 你應該要有6塊肌與馬甲線<br>
+                        陳彥博熱愛超馬 所以他用生命完成了七大洲八大站的馬拉松<br>
+                        我熱愛潛水 我想在有限的生命去完成我夢想的大海藍圖<br>
+                    </p>
 
                     <div class='row'>
                         <div class='profile-card col-md-10 offset-md-1 animate-show'>
