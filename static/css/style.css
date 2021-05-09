@@ -661,6 +661,39 @@ table td{
 }
 
 
+.Que{
+	font-size: 25px;
+	font-weight: 600;
+	color: #ff738c;
+	
+ }
+ 
+ .Ans{
+	font-size: 25px;
+	font-weight: 600;
+	color:#1dda06;
+	
+ }
+
+ .question-row{
+	margin-top:30px;
+	border-radius:5px;
+ }
+ 
+ .answer-row{
+	margin-bottom: 30px !important;
+ }
+ 
+ .underline-aqua{
+	 border-bottom-style:solid;
+	 border-bottom-color:aqua;
+ }
+
+ .askquestion{
+	 margin-bottom:50px;
+ }
+
+
 
 
 .page-enter-active,

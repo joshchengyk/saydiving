@@ -11,7 +11,7 @@
                             <b-nav-item class='header-nav'><nuxt-link to='/news'>最新活動</nuxt-link></b-nav-item>
                             <b-nav-item class='header-nav'><nuxt-link to='/lessons'>課程報名</nuxt-link></b-nav-item>
                             <b-nav-item class='header-nav'><nuxt-link to='/photos'>精彩回顧</nuxt-link></b-nav-item>
-                            <b-nav-item class='header-nav'><nuxt-link to='/faq'>常見問題</nuxt-link></b-nav-item>
+                            <b-nav-item class='header-nav'><nuxt-link to='/qas'>常見問題</nuxt-link></b-nav-item>
                             <b-nav-item class='header-nav'><nuxt-link to='/aboutus'>關於我們</nuxt-link></b-nav-item>
                         </b-navbar-nav>
 
