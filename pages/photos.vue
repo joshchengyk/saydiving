@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class='container'>
-
+      <a href="top"></a>
       <h1 class= 'page-title col-md-12'>精彩回顧</h1>
       <p>
         我熱愛潛水 我想在有限的生命去完成我夢想的大海藍圖<br>
@@ -20,7 +20,13 @@
             </div>
           </template>
         </vue-masonry-wall>
-      </div>     
+      </div>   
+
+      <a href="#top" class='floatbtn'>
+          <h6 class="floatarrow text-center">^</h6>
+          <h6 class="text-center">TOP</h6>
+      </a>
+
     </div>
   </div>
 </template>

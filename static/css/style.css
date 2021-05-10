@@ -693,6 +693,23 @@ table td{
 	 margin-bottom:50px;
  }
 
+ .floatarrow{
+	font-size: 25px;
+    margin-bottom: 0;
+ }
+
+ .floatbtn{
+	position: fixed;
+    border-radius: 70px;
+    background-color: orange;
+    color: white;
+    font-weight: 900;
+    width: 55px;
+    height: 55px;
+    bottom: 10vh;
+    right: 15vw;
+}
+	 
 
 
 

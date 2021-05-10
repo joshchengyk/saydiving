@@ -47,7 +47,7 @@ export default {
   build: {
   },
   env:{
-    backendurl:'http://file.saydiving.com',
+    backendurl:'https://file.saydiving.com',
     frontendurl:'http://localhost:3000'
   }
 }
