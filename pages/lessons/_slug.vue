@@ -6,8 +6,8 @@
 
                 <div class='col-md-6'>
 
-                    <h1 class='pay-title'>Open Water Diver</h1>
-                    <h1 class='pay-subtitle'>開放水域潛水員    <small>$16000 / 人</small></h1>
+                    <h1 class='pay-title'>{{lesson.title}}</h1>
+                    <h1 class='pay-subtitle'>{{lesson.title_ch}}    <small>${{lesson.price}} / 人</small></h1>
                     
                     <div class='row'>
                         <h2 class='col-md-12 text-center page-title'>費用包含</h2>
@@ -16,51 +16,16 @@
                     <div class='row'>
                         <div class='col-md-6'>
                             <h3 class='text-center'>課程內容</h3>
-                            <p class='col-md-10 offset-md-1'>
-                                <ol>
-                                    <li class='lesson-item'>
-                                        術科課程/泳池課程4小時<br>
-                                        訓練場地：Bali-Hi潛水中心
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        海洋實習/開放水域6小時<br>
-                                        訓練場地：東北角海域
-                                    </li>
-                                </ol>
+                            <p class='col-md-10 offset-md-2' v-for="(item,idx) in lesson.chapter.split('\n')" :key="idx">
+                                {{item}}
                             </p>
                             
                         </div>
 
                         <div class='col-md-6'>
                             <h3 class='text-center'>其他費用</h3>
-                            <p class='col-md-10 offset-md-1'>
-                                <ol>
-                                    <li class='lesson-item'>
-                                        套裝潛水教材
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        開放水域潛水員證照申請
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        課程訓練費用
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        全套潛水裝備使用(不含電腦錶)
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        氣瓶費
-                                    </li>
-
-                                    <li class='lesson-item'>
-                                        上課期間平安保險
-                                    </li>
-                                                                                                
-                                </ol>
+                            <p class='col-md-10 offset-md-2' v-for="(item,idx) in lesson.equipment.split('\n')" :key="idx">
+                                {{item}}
                             </p>
                         </div>
                     </div>
@@ -77,9 +42,9 @@
 
                     <div class='item-box col-md-6 offset-md-3 transfer-box'>
                         <h4 class='text-center'>交易明細</h4>
-                        <h6 class='text-right transfer-item'>教學費用: 16000$</h6>
+                        <h6 class='text-right transfer-item'>教學費用: {{lesson.price}}$</h6>
                         <h6 class='text-right transfer-item'>參加人數: {{numvalue}}</h6>
-                        <h6 class='text-right transfer-summary'>總共:{{16000*numvalue+"$"}}</h6>
+                        <h6 class='text-right transfer-summary'>總共:{{lesson.price*numvalue+"$"}}</h6>
                     </div>   
 
                     <button class='btn1 col-md-4 offset-md-4' @click='transfer'>確認報名</button>                  
@@ -96,11 +61,19 @@
 <script>
   export default {
 
-    data() {
-        return {
+    data(){
+        return{
+            backendurl: process.env.backendurl,
+            title:'潛水課程',
             datevalue: '',
             numvalue:1
         }
+    },
+
+    async asyncData({$axios}){
+        const lessons = await $axios.$get(process.env.backendurl+"/lessons?slug=OpenWater")
+        const lesson = lessons[0]
+        return {lesson}
     },
 
     methods:{
