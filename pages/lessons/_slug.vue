@@ -2,7 +2,7 @@
     <div>
         <div class='container-fluid no-padding'>
             <div class='row'>
-                <img src="/pictures/OpenWater.jpg" alt="Image" class='col-md-6'>
+                <img :src='backendurl+lesson.main_img.url' alt="Image" class='col-md-6'>
 
                 <div class='col-md-6'>
 
@@ -70,8 +70,8 @@
         }
     },
 
-    async asyncData({$axios}){
-        const lessons = await $axios.$get(process.env.backendurl+"/lessons?slug=OpenWater")
+    async asyncData({$axios,params}){
+        const lessons = await $axios.$get(process.env.backendurl+"/lessons?slug=" + params.slug)
         const lesson = lessons[0]
         return {lesson}
     },
