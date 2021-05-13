@@ -710,6 +710,26 @@ table td{
     right: 15vw;
 }
 	 
+.image-holder img{
+	width:80vw;
+	position:relative;
+}
+
+.image-holder h1{
+	position:absolute;
+	z-index:99;
+	color:white;
+}
+
+.image-holder p{
+	position: absolute;
+    z-index: 99;
+    top: 110px;
+    left: 32px;
+    font-weight: 600;
+    font-size: 20px;
+	color:white;
+}
 
 
 
@@ -752,5 +772,24 @@ table td{
 	.animate-show{
 		opacity:1;
 		visibility: visible;
+	}
+
+	.image-holder h1{
+		position:relative;
+		color:black;
+	}
+	
+	.image-holder p{
+		position: relative;
+		z-index: 0;
+		top: 0;
+		left: 10px;
+		font-weight: 600;
+		font-size: 20px;
+		color:black;
+	}
+
+	.image-holder img{
+		display:none;
 	}
 }
