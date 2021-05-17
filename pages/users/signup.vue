@@ -1,9 +1,9 @@
 <template>
     <div>
-        <section class='signupform' v-if='this.status==""'>
+        <section class='defaultform' v-if='this.status==""'>
         <div class="container">      
           <div class="row">
-            <div class="col-md-6 offset-md-3 signup-area" >                   
+            <form class="col-md-6 offset-md-3 signup-area" onsubmit='return false;' >                   
               <h2 class='text-center'>註冊會員</h2>
               <p class="lead text-center">
                   歡迎加入我們!
@@ -66,7 +66,18 @@
               </div>
               
 
-            </div>
+            </form>
+          </div>
+          <!--end of row-->
+        </div>
+        <!--end of container-->
+      </section>
+
+      <section v-if='status=="sending"' class='defaultform'>
+        <div class=" container">      
+          <div class="row col-md-3 col-8 offset-md-5 offset-3 loadingMsg ">
+                <b-spinner variant="light" label="Text Centered"></b-spinner>
+                <h2 class='text-center text-light'>資料傳送中...</h2>          
           </div>
           <!--end of row-->
         </div>
@@ -121,19 +132,19 @@ export default {
     },
 
     async register(){
+      this.status='sending'
       const response = await this.$axios.$post(process.env.backendurl+'/auth/local/register',{
         username:this.email,     
         email:this.email,
         password:this.password,
         firstname:this.firstname,
         lastname:this.lastname,
-        phone:this.phone
-
-
+        phone:this.phone,
       })
       .then(r =>{
         console.log(r.jwt)
         this.status='finish'
+        
       })
       .catch(err =>{
         console.log(err)

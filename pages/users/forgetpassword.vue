@@ -1,23 +1,36 @@
 <template>
     <div>
-      <section class='loginform'>
+      <section v-if='status!="sending"' class='defaultform'>
         <div class=" container">      
           <div class="row">
-            <div class="col-md-6 offset-md-3" >                   
-              <h2 class='text-center bgtext'>忘記密碼</h2>
-              <p class="lead text-center bgtext">
+            <form class="col-md-6 offset-md-3" onsubmit='return false;' >                   
+              <h2 class='text-center bgtext text-light'>忘記密碼</h2>
+              <p class="lead text-center bgtext text-light">
                   請輸入Email讓我們把認證信寄給您!
               </p>
               <div class="form-group">
-                <label class='bgtext'>電子郵件</label>
+                <label class='bgtext text-light'>電子郵件</label>
                 <input type="email" class='form-control' placeholder='example@gmail.com' v-model='email'>
               </div>
 
-              <div class="form-group col-md-3 col-3 offset-md-5 offset-5"  >
-                <button @click='forgetpwd'>送出</button>             
+              <div v-if='status=="err"' class='errMsg'>此email尚未註冊或錯誤</div>
+
+              <div class="form-group col-md-4 col-4 offset-md-4 offset-4"  >
+                <input type='submit' class= 'btn2' @click='forgetpwd' value = '送出'>             
               </div>
-              <span>還不是會員?</span><nuxt-link to='/users/signup' class='bgtext'>按此註冊</nuxt-link>
-            </div>
+              <span class='text-light'>還不是會員?</span><nuxt-link to='/users/signup' class='bgtext text-orange'>按此註冊</nuxt-link>
+            </form>
+          </div>
+          <!--end of row-->
+        </div>
+        <!--end of container-->
+      </section>
+
+      <section v-if='status=="sending"' class='defaultform'>
+        <div class=" container">      
+          <div class="row col-md-3 col-8 offset-md-5 offset-3 loadingMsg ">
+                <b-spinner variant="light" label="Text Centered"></b-spinner>
+                <h2 class='text-center text-light'>資料傳送中...</h2>          
           </div>
           <!--end of row-->
         </div>
@@ -35,12 +48,14 @@ export default {
       frontendurl: process.env.frontendurl,
       backendurl:process.env.backendurl,
       email:'',
+      status:'noncheck'
     }
   },
 
   methods:{
     
     async forgetpwd(){
+      this.status = 'sending'
       const respons = await this.$axios.$post(this.backendurl+'/auth/forgot-password',{  
          
          email: this.email  
@@ -53,7 +68,7 @@ export default {
       })
       .catch(err =>{
         console.log(err)
-        alert('err!')
+        this.status = 'err'
       })
     }
    

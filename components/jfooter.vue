@@ -4,7 +4,7 @@
 	        <div class="container">
 		        <div class='row'>
 					  <div class='col-md-4 text-left'>
-						  <img src='pictures/logo.png' width='85'>
+						  <img src='/pictures/logo.png' width='85'>
 						  <p>你的免費租屋網。100%終身免佣。自助配對。</p>
 					  </div>
 					  <div class='col-md-4 text-left'>

@@ -4,11 +4,12 @@
   <section  ref='cover' class='cover'>
   </section>
   
-  <section ref="box" class="loader">
+  <section ref="box" class="welcome-animation">
       <div class="background-image-holder">
           <img class='Main-logo' alt="Image" src="/pictures/Main_Logo.png" />
           <div class="textwrapper2">
-              <h1 class="text-center slogan">說衝就衝!Say衝潛水!</h1>
+              <h2 class="text-center slogan">說衝就衝!Say衝潛水!</h2>
+              <h1 class="text-center slogan">專業潛水課程</h1>
           </div>
       </div>
   </section>
@@ -118,18 +119,20 @@
    
   export default {
     mounted() { 
-
+      this.window_width=window.innerWidth
       const { box } = this.$refs
       const { cover } = this.$refs
-     
-      gsap.to(cover,0.5,{
+
+      gsap.to(cover,{
             delay:1,
-            autoAlpha: 0
+            autoAlpha: 0,
+            duration:0.5
         })
 
-      gsap.to(box, 1, {
+      gsap.to(box, {
             delay:3,
-            yPercent:-100
+            yPercent:-100,
+            duration:1
         })             
     },
 
@@ -138,7 +141,8 @@
       return {
         title: 'Say衝潛水',
         slide: 0,
-        sliding: null
+        sliding: null,
+        window_width:0
       }
     },
     head() {
