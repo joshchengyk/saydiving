@@ -8,11 +8,12 @@
 <script>
 import jheader from '~/components/jheader'
 import jfooter from '~/components/jfooter'
+
 export default {
   transtions:"default",
   components:{
     jheader,
-    jfooter
+    jfooter,
   }
 }
 </script>

@@ -601,7 +601,7 @@ table td{
 }
 
 .page-title{
-	padding-top:15vh;
+	padding-top:8vh;
 	padding-bottom:25px;
     font-weight: 600;
 }
@@ -750,7 +750,79 @@ table td{
 	color:white;
 }
 
+.no-dot{
+	list-style-type: none;
+    margin: 15px 0;
+    padding: 0;
+    font-size: 20px;
+    border-top: 1px solid black;
+}
 
+.no-dot li{
+	padding:10px 0;
+	cursor:pointer;
+	
+}
+
+.no-dot :hover{
+	background-color:rgb(94, 94, 94);
+	color:white;
+}
+
+.slide-btn{
+	display:none !important;
+	position:absolute;
+	z-index:5;
+	top:30px;
+	right:-35px;
+	border:none;
+}
+
+.slide-bar{
+	position:absolute;
+	z-index:5;
+	width:250px;
+	height:100vh;
+	background-color: lightblue;
+}
+
+.slide-content{
+	padding-top: 75px;
+    
+}
+
+
+.setting-container{
+	height:100vh;
+	background-color:#f7f7f7;
+	margin-left:250px;
+	padding-top:25px;
+	padding-left:25px;
+}
+
+.setting-title{
+	border-bottom:1px solid orange;
+	font-size: 30px;
+	margin-bottom:30px;
+}
+
+.setting-form{
+	margin:0 20px;
+}
+
+.setting-row{
+	margin:30px 0;
+}
+
+label{
+	margin:0 5px;
+}
+
+
+svg{
+	margin-right: 5px;
+	margin-left: 5px;
+}
 
 .page-enter-active,
 .page-leave-active {
@@ -855,4 +927,19 @@ table td{
 		font-size: 50px;
 		margin-top:25px;
 	}
+
+	.slide-btn{
+		display:block !important;
+	}
+
+	.slide_animate{
+		transform:translateX(-250px);
+	}
+
+	.setting-container{
+		margin-left:0
+	}
+
+	
+	
 }
