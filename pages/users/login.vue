@@ -11,7 +11,7 @@
               </p>
               <div class="form-group">
                 <label class='bgtext text-light'>電子郵件</label>
-                <input type="email" class='form-control' placeholder='example@gmail.com' v-model='email'>
+                <input type="email" class='form-control' placeholder='example@gmail.com' v-model='email' ref='email'>
                 <div v-if='status=="err"' class='errMsg'>電子郵件或密碼錯誤!</div>
               </div>
 
@@ -58,6 +58,10 @@ export default {
       pwd:'',
       status:'noncheck'
     }
+  },
+
+  mounted(){
+    this.$refs.email.focus()
   },
 
   methods:{

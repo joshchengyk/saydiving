@@ -10,7 +10,7 @@
               </p>
               <div class="form-group">
                 <label class='bgtext text-light'>電子郵件</label>
-                <input type="email" class='form-control' placeholder='example@gmail.com' v-model='email'>
+                <input type="email" class='form-control' placeholder='example@gmail.com' v-model='email' ref='email'>
               </div>
 
               <div v-if='status=="err"' class='errMsg'>此email尚未註冊或錯誤</div>
@@ -50,6 +50,10 @@ export default {
       email:'',
       status:'noncheck'
     }
+  },
+
+  mounted(){
+    this.$refs.email.focus()
   },
 
   methods:{

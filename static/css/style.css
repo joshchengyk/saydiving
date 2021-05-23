@@ -513,8 +513,13 @@ table td{
 .errMsg{
 	color:red;
 	font-weight:600;
-	margin-left: 20px !important;
+}
 
+
+.errMsg2{
+	color:red;
+	font-weight:600;
+	top:-15px;
 }
 
 .loadingMsg{
