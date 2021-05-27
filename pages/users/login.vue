@@ -67,7 +67,8 @@ export default {
   methods:{
     ...mapMutations({
       setUser: 'auth/setUser',
-      setFirstname: 'auth/setFirstname'
+      setFirstname: 'auth/setFirstname',
+      setUsermail: 'auth/setUsermail'
     }),
     async login(){
 
@@ -80,9 +81,9 @@ export default {
           password: this.pwd,
         })
         .then(r => {
-          console.log(r)
           this.setUser(r.jwt)
           this.setFirstname(r.user.firstname)
+          this.setUsermail(r.user.email)
           window.location = '/lessons'
         })
         .catch(err =>{

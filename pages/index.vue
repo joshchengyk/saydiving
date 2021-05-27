@@ -7,15 +7,14 @@
   <section ref="box" class="welcome-animation">
       <div class="background-image-holder">
           <img class='Main-logo' alt="Image" src="/pictures/Main_Logo.png" />
-          <div class="textwrapper2">
+          <div ref="text" class="textwrapper2">
               <h2 class="text-center slogan">說衝就衝!Say衝潛水!</h2>
               <h1 class="text-center slogan">專業潛水課程</h1>
           </div>
       </div>
   </section>
 
-
-  <section>
+  <section >
     <div class=textimg>
       <div class='jumbotron'>
         <b-carousel
@@ -51,7 +50,21 @@
     </div>
   </section>
 
-  <section class="">
+  <section class="homepage-section">
+      <div class="container">
+          <h1>專業教學</h1>
+          <p>
+            Say衝潛水有豐富的教學經驗 曾在馬爾地夫、帛琉、泰國PP島等知名海域教學<br>
+            在台主要教學地點為東北角 可接受一對一教學 歡迎與我一起進入這蔚藍的世界
+          </p>
+          <div >
+            <iframe v-if='screen_width > screen_height' :width='screen_width*0.6' :height="screen_width*0.56 * 0.6" class='col-md-10 offset-md-1' src="https://www.youtube.com/embed/XkwaPOS-Yws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe v-if='screen_width < screen_height' :width='screen_width*0.9' :height="screen_width*0.56 *0.9" src="https://www.youtube.com/embed/XkwaPOS-Yws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+  </section>
+
+  <section class="homepage-section">
       <div class="container">
           <h1>推薦課程</h1>
           <br>
@@ -118,8 +131,11 @@
     
    
   export default {
+
     mounted() { 
-      this.window_width=window.innerWidth
+      
+      window.addEventListener('resize', this.handleResize);
+      this.handleResize();
       const { box } = this.$refs
       const { cover } = this.$refs
 
@@ -132,6 +148,7 @@
       gsap.to(box, {
             delay:3,
             yPercent:-100,
+            autoAlpha: 0,
             duration:1
         })             
     },
@@ -142,7 +159,10 @@
         title: 'Say衝潛水',
         slide: 0,
         sliding: null,
-        window_width:0
+        window_width:0,
+        window_height:0,
+        screen_width:0,
+        screen_height:0,
       }
     },
     head() {
@@ -165,7 +185,19 @@
       },
       onSlideEnd(slide) {
         this.sliding = false
+      },
+      handleResize() {
+          this.window_width = window.innerWidth
+          this.window_height = window.innerHeight     
+          this.screen_width = screen.availWidth
+          this.screen_height = screen.availHeight
       }
-    }
+
+    },
+
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
+
   }
 </script>

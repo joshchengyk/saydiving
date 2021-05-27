@@ -66,19 +66,44 @@
             backendurl: process.env.backendurl,
             title:'潛水課程',
             datevalue: '',
-            numvalue:1
+            numvalue:1,
+            
         }
     },
 
-    async asyncData({$axios,params}){
+    async asyncData({$axios,params,store}){
+
         const lessons = await $axios.$get(process.env.backendurl+"/lessons?slug=" + params.slug)
+           
         const lesson = lessons[0]
         return {lesson}
     },
 
     methods:{
-        transfer(){
-            window.location='/lessons/confirm'
+
+        async transfer(){
+
+            const response = await this.$axios.$post(process.env.backendurl+"/orders",{
+                status:"non_paid",
+                members:this.numvalue,
+                tuition:this.lesson.price * this.numvalue,
+                schoolday:this.datevalue,
+                lesson:this.lesson.id
+            },{
+                headers:{
+                    Authorization:this.$store.getters['auth/getuserjwt']
+                }
+            })
+            .then(r=>{
+                window.location='/lessons/confirm'
+            })
+            .catch(err=>{
+                alert('err')
+                console.log(err)
+            })
+            
+            
+            
             
         }
     }

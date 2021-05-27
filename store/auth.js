@@ -16,6 +16,13 @@ export const getters = {
             return state.firstname
         else
             return null
+    },
+
+    getusermail(state){
+        if(state.usermail)
+            return state.usermail
+        else
+            return null
     }
 
     
@@ -33,9 +40,18 @@ export const mutations = {
         Cookies.set('firstname',payload)
     },
 
+    setUsermail(state,payload){
+        state.usermail = payload
+        Cookies.set('usermail',payload)
+    },
+
     logout(state){
         state.userjwt=null
+        state.usermail=null
+        state.firstname=null
         Cookies.set('userjwt',null)
+        Cookies.set('usermail',null)
+        Cookies.set('firstname',null)
     }
 }
 

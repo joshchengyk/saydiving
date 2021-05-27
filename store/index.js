@@ -10,10 +10,13 @@ export const actions = {
 
           if (parsed.userjwt == 'null'){             
             commit('auth/setUser', null)
-            commit('auth/setFirstname' , null)}
+            commit('auth/setFirstname' , null)
+            commit('auth/setUsermail',null)}
           else{ 
             commit('auth/setUser', parsed.userjwt)
-            commit('auth/setFirstname',parsed.firstname)}
+            commit('auth/setFirstname',parsed.firstname)
+            commit('auth/setUsermail',parsed.usermail)
+          }
   
         }
   

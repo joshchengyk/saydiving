@@ -5,11 +5,11 @@
             <fa :icon='["fas" , "cog"]' style="font-size: 30px" v-if='status=="close"' class='slide-btn' @click='slideClick'/>
             <fa :icon='["fas" , "chevron-circle-left"]' style="font-size: 30px" v-if='status=="open"' class='slide-btn' @click='slideClick' />       
             <div class='slide-content'>
-                <h5 class='text-center'>Hi! Chi-Han Cheng</h5>          
+                <h5 class='text-center'>{{getEmail}}</h5>          
                 <ul class='no-dot'>
-                <li class='text-center'><fa :icon='["fas" , "swimmer"]' style="font-size: 20px"/>我的課程</li>
-                <li class='text-center'><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>聯絡資訊</li>
-                <li class='text-center'><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>訊息通知</li>
+                  <a href="/users/my-lessons"><li class='text-center'><fa :icon='["fas" , "swimmer"]' style="font-size: 20px"/>我的課程</li></a>
+                  <a href="/users/my-account"><li class='text-center'><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>聯絡資訊</li></a>
+                  <a href="/users/my-message"><li class='text-center' ><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>訊息通知</li></a>
                 </ul>   
             </div>
             </div> 
@@ -24,6 +24,12 @@ export default {
   data(){
     return{
       status:'close',
+    }
+  },
+
+  computed:{
+    getEmail(){
+      return this.$store.getters['auth/getusermail']
     }
   },
 
@@ -49,6 +55,11 @@ export default {
         
     }
   }
-
 }
 </script>
+
+<style>
+    a{
+        color: black;
+    }
+</style>
