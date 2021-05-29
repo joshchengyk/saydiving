@@ -837,6 +837,10 @@ min-width:8rem;
 
 }
 
+.lesson_container{
+	margin: 25px;
+}
+
 .lesson_header{
 width:12.8rem;
 }
@@ -856,7 +860,66 @@ margin-bottom:5vh;
 	border-radius: 5px;
     height: 25px;
 	background-color:white;
+	margin-bottom:5px;
 }
+
+.icon_btn{
+	height: 25px;
+    border-radius: 5px;
+}
+
+.search_box{
+	height: 25px;
+    margin-bottom: 5px;
+}
+
+.Msg-Container{
+	position:fixed;
+	z-index:99;
+	width:100vw;
+	height:100vh;
+	background-color:rgba(161, 161, 161, 0.3);
+	top: 0;
+    
+}
+
+.Msg-box{
+	position: relative;
+    background-color: white;
+    top: 30vh;
+    left: 42vw;
+    height: 125px;
+    width: 230px;
+    opacity: 1;
+    border: 1px solid gray;
+}
+
+.Msg-bar{
+	position: absolute;
+    width: 230px;
+    background-color: orange;
+    color: white;
+}
+
+.Msg-text{
+	position: absolute;
+    top: 35px;
+    left: 20px;
+}
+
+.Msg-btns-row{
+	position: absolute;
+    bottom: 10px;
+    width: 220px;
+    margin: 0 10px;
+}
+
+.Msg-btns-row button{
+	width:100px;
+}
+
+
+
 
 label{
 	margin:0 5px;
@@ -983,5 +1046,20 @@ svg{
 		min-width:1rem;
 	
 	  }
-	
+
+	  .Msg-box{
+		left:35vw;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+	.lesson_container{
+		font-size:12px;
+	}
+
+	.Msg-box{
+		left:25vw;
+	}
 }
