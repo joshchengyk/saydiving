@@ -3,7 +3,7 @@
       <section class='loginform'>
         <div class=" container">      
           <div class="row">
-            <div class="col-md-6 offset-md-3" >                   
+            <div class="col-md-6 col-lg-6 col-xl-6 offset-md-3 offset-lg-3 offset-xl-3" >                   
               <h2 class='text-center bgtext'>重設密碼</h2>
               <p class="lead text-center bgtext">
                   請輸入新的密碼!
@@ -20,7 +20,7 @@
                 <label v-if='status=="confirmErr"' class='errMsg'>兩次密碼輸入不相符</label>
               </div>
 
-              <button class='col-md-4 offset-md-4 btn2' @click='resetpwd'>送出</button>   
+              <button class='col-md-4 col-lg-4 col-xl-4 offset-md-4 offset-lg-4 offset-xl-4 btn2' @click='resetpwd'>送出</button>   
         
             </div>
           </div>

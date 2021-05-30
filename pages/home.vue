@@ -41,7 +41,7 @@
                 <h1>推薦課程</h1>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
                         <div class="feature feature-1">
                             <img alt="Image" src="/pictures/level1.jpg" />
                             <div class="feature__body boxed boxed--border">                     
@@ -56,7 +56,7 @@
                         <!--end feature-->                
                     </div>         
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
                         <div class="feature feature-1">
                             <img alt="Image" src="/pictures/level2.jpg" />
                             <div class="feature__body boxed boxed--border">                                         
@@ -71,7 +71,7 @@
                         <!--end feature-->                
                     </div>         
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4">
                         <div class="feature feature-1">
                             <img alt="Image" src="/pictures/level3.jpg" />
                             <div class="feature__body boxed boxed--border">                     

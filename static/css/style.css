@@ -755,7 +755,7 @@ table td{
 .image-holder p{
 	position: absolute;
     z-index: 99;
-    top: 110px;
+    top: 130px;
     left: 32px;
     font-weight: 600;
     font-size: 20px;
@@ -825,20 +825,21 @@ table td{
 .setting-row{
 	margin:30px 0;
 }
-
-.mylesson tr{
-	color:white;
-	background-color:orange;
-  }
-  
+ 
 .mylesson th,td{
-border:1px solid black;
-min-width:8rem;
+	border:1px solid black !important;
+	background-color:orange !important ;
+	min-width:8rem;
+	color:white;
+	
+}
 
+.mylesson a{
+	color: #004ab7 !important;
 }
 
 .lesson_container{
-	margin: 25px;
+	margin: 10px;
 }
 
 .lesson_header{
@@ -918,7 +919,9 @@ margin-bottom:5vh;
 	width:100px;
 }
 
-
+.jaside-nav{
+	color:black !important;
+}
 
 
 label{
@@ -1059,7 +1062,23 @@ svg{
 		font-size:12px;
 	}
 
+	.lesson_table_btn{
+		margin:0;
+	}
+
+	.lesson_pay_row{
+		margin-bottom: 7vh;
+	}
+
 	.Msg-box{
 		left:25vw;
+	}
+
+	.page-title {
+		font-size:30px !important;
+	}
+
+	.page-intro{
+		font-size:15px !important;
 	}
 }

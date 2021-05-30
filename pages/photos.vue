@@ -2,9 +2,9 @@
   <div>
     <div class='container'>
       <a href="top"></a>
-      <div class='col-md-12 image-holder'>
+      <div class='col-md-12 col-lg-12 col-xl-12 image-holder'>
         <h1 class= 'page-title col-md-12 '>精彩回顧</h1>
-        <p >
+        <p class='page-intro'>
           我熱愛潛水 我想在有限的生命去完成我夢想的大海藍圖<br>
           發源地永遠都是我最愛的家 台灣~<br>
           上帝遺留的珍珠 馬爾地夫 彩虹的故鄉 帛琉<br>
@@ -15,7 +15,7 @@
       </div>
   
       <div v-for="(el,idx) in photos" :key='idx'>
-        <h2 class='col-md-12 text-center gallery-location'>{{el.location_ch}}</h2>
+        <h2 class='col-md-12 col-lg-12 col-xl-12 text-center gallery-location'>{{el.location_ch}}</h2>
 
         <vue-masonry-wall :items=el.photos :options="{width: 500, padding: 12}" @append="append">
           <template v-slot:default="{item}">

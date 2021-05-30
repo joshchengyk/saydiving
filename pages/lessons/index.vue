@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h1 class='col-md-12 text-center page-title'>潛水課程</h1>
+        <h1 class='col-md-12 col-lg-12 col-xl-12 text-center page-title'>潛水課程</h1>
         <div class='container' v-for='(lesson,idx) in lessons' :key='idx' >      
             <nuxt-link :to='"/lessons/"+lesson.slug' >
                 <div class='row lesson-row animate-show lessonCard' v-if='idx % 2 ==0 || window.width < 765 ' >
-                    <div class='col-md-7'>                   
+                    <div class='col-md-7 col-lg-7 col-xl-7'>                   
                         <h1 class='lesson-title'>{{lesson.title}}</h1>
                         <h3>{{lesson.title_ch}}</h3>
                         <p>
@@ -13,16 +13,16 @@
 
                     
                     </div>
-                    <div class='col-md-5'>
+                    <div class='col-md-5 col-lg-5 col-xl-5'>
                         <img :src= 'backendurl + lesson.thumbnail.url'>
                     </div>
                 </div>
         
                 <div class='row lesson-row animate-show lessonCard' v-if =' idx % 2 != 0 && window.width >= 765'>
-                    <div class='col-md-5 '>
+                    <div class='col-md-5 col-lg-5 col-xl-5 '>
                         <img :src= 'backendurl + lesson.thumbnail.url'>
                     </div>
-                    <div class='col-md-7 '>
+                    <div class='col-md-7 col-lg-7 col-xl-7 '>
                         <h1 class='lesson-title'>{{lesson.title}}</h1>
                         <h3>{{lesson.title_ch}}</h3>
                         <p>

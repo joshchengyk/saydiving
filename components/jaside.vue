@@ -7,9 +7,9 @@
             <div class='slide-content'>
                 <h5 class='text-center'>{{getEmail}}</h5>          
                 <ul class='no-dot'>
-                  <a href="/users/my-lessons"><li class='text-center'><fa :icon='["fas" , "swimmer"]' style="font-size: 20px"/>我的課程</li></a>
-                  <a href="/users/my-account"><li class='text-center'><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>聯絡資訊</li></a>
-                  <a href="/users/my-message"><li class='text-center' ><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>訊息通知</li></a>
+                  <a href="/users/my-lessons" class='jaside-nav'><li class='text-center'><fa :icon='["fas" , "swimmer"]' style="font-size: 20px"/>我的課程</li></a>
+                  <a href="/users/my-account" class='jaside-nav'><li class='text-center'><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>聯絡資訊</li></a>
+                  <a href="/users/my-message" class='jaside-nav'><li class='text-center' ><fa :icon='["fas" , "user-circle"]' style="font-size: 20px"/>訊息通知</li></a>
                 </ul>   
             </div>
             </div> 
@@ -58,8 +58,3 @@ export default {
 }
 </script>
 
-<style>
-    a{
-        color: black;
-    }
-</style>

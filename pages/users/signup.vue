@@ -3,7 +3,7 @@
         <section class='defaultform' v-if='this.status==""'>
         <div class="container">      
           <div class="row">
-            <form class="col-md-6 offset-md-3 signup-area" onsubmit='return false;' >                   
+            <form class="col-md-6 col-lg-6 col-xl-6 offset-md-3 offset-lg-3 offset-xl-3 signup-area" onsubmit='return false;' >                   
               <h2 class='text-center'>註冊會員</h2>
               <p class="lead text-center">
                   歡迎加入我們!
@@ -50,9 +50,9 @@
                   <label class=''>生日</label><label  v-if='(!this.year || !this.month || !this.day) && this.check'  class='errMsg'>請填寫生日!</label>
                 </div>
                 <div class=''>
-                  <input type="year" class=' col-md-3 col-2' placeholder="年" v-model='year'>
-                  <input type="day" class=' col-md-3 col-2' placeholder="月" v-model='month'>
-                  <input type="day" class=' col-md-3 col-2' placeholder="日" v-model='day'>           
+                  <input type="year" class=' col-2 col-md-3 col-lg-3 col-xl-3 ' placeholder="年" v-model='year'>
+                  <input type="day" class=' col-2 col-md-3 col-lg-3 col-xl-3 ' placeholder="月" v-model='month'>
+                  <input type="day" class=' col-2 col-md-3 col-lg-3 col-xl-3 ' placeholder="日" v-model='day'>           
                 </div>
               </div>
 
@@ -61,7 +61,7 @@
               </div>
            
 
-              <div class="form-group col-md-2 col-3 offset-md-5 offset-5"  >
+              <div class="form-group col-3 col-md-2 col-lg-2 col-xl-2 offset-5 offset-md-5 offset-lg-5 offset-xl-5 "  >
                 <button @click='checkinfo'>送出</button>             
               </div>
               
@@ -75,7 +75,7 @@
 
       <section v-if='status=="sending"' class='defaultform'>
         <div class=" container">      
-          <div class="row col-md-3 col-8 offset-md-5 offset-3 loadingMsg ">
+          <div class="row col-8 col-md-3 col-lg-3 col-xl-3 offset-3 offset-md-5 offset-lg-5 offset-xl-5  loadingMsg ">
                 <b-spinner variant="light" label="Text Centered"></b-spinner>
                 <h2 class='text-center text-light'>資料傳送中...</h2>          
           </div>
@@ -87,7 +87,7 @@
       <section class='signupform' v-if='this.status=="finish"'>
         <div class="container">      
             <div class="row">
-                <div class="col-md-6 offset-md-3 welcomeMsg" >
+                <div class="col-md-6 col-lg-6 col-xl-6 offset-md-3 offset-lg-3 offset-xl-3 welcomeMsg" >
                     <h1 class='text-center'>歡迎加入!</h1>
                     <p class='text-center'>我們已經把驗證信件寄送到:{{this.email}}</p>
                     <p class='text-center'>請點擊mail內的連結完成註冊</p>
